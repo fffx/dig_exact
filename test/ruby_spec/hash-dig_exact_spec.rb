@@ -9,7 +9,7 @@ describe "Hash#dig_exact" do
 
   it "does recurse" do
     h = { foo: { bar: { baz: 1 } } }
-    assert_equal(1, h.dig(:foo, :bar, :baz))
+    assert_equal(1, h.dig_exact(:foo, :bar, :baz))
     assert_nil h.dig_exact(:foo, :bar, :nope)
     assert_nil h.dig_exact(:foo, :baz)
     assert_nil h.dig_exact(:bar, :baz, :foo)
