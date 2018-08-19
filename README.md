@@ -2,8 +2,6 @@
 
 `#dig_exact` is the same as `#dig`, but `#dig_exact` never raise `<Klass> does not have #dig method`, it will return nil instead.
 
-[Our travis](https://travis-ci.org/jrochkind/dig_rb)
-
 ## Installation
 
 Add this line to your application's Gemfile:
