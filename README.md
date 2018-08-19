@@ -1,4 +1,4 @@
-# dig_exact based on Dig_rb ![](https://travis-ci.org/fffx/dig_exact.svg?branch=master)
+# dig_exact [![Build Status](https://travis-ci.org/fffx/dig_exact.svg?branch=master)](https://travis-ci.org/fffx/dig_exact)
 
 `#dig_exact` is the same as `#dig`, but `#dig_exact` never raise `<Klass> does not have #dig method`, it will return nil instead.
 
