@@ -16,7 +16,7 @@ class TestDigRb < Minitest::Test
   def test_array_examples
     a = [[1, [2, 3]]]
     assert_equal(3, a.dig_exact(0, 1, 1))
-    assert_equal(nil, a.dig_exact(1, 2, 3))
+    assert_nil a.dig_exact(1, 2, 3)
 
     assert_nil a.dig_exact(0, 0, 0)
 

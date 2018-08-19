@@ -1,13 +1,4 @@
 require 'minitest_helper'
-=begin
-[Array, Hash, OpenStruct, Struct].each do |c|
-  raise "#{c} doesn't have a method #dig_exact !" if c.instance_methods(:dig_exact).nil?
-  c.class_eval do
-    alias :origin_dig :dig
-    alias :dig :dig_exact
-  end
-end
-=end
 describe "Hash#dig_exact" do
   it "returns #[] with one arg" do
     h = { 0 => false, a: 1 }

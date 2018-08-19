@@ -2,35 +2,14 @@
 
 `#dig_exact` is the same as `#dig`, but `#dig_exact` never raise `<Klass> does not have #dig method`, it will return nil instead.
 
-# Dig_rb
-
-[![Gem Version](https://badge.fury.io/rb/dig_rb.svg)](https://badge.fury.io/rb/dig_rb) [![Build Status](https://travis-ci.org/jrochkind/dig_rb.svg?branch=master)](https://travis-ci.org/jrochkind/dig_rb)
-
-[Ruby 2.3.0 introduced #dig on Hash, Array, and Struct](https://www.ruby-lang.org/en/news/2015/12/25/ruby-2-3-0-released/). With this gem, you can have dig on ruby pre 2.3.0, or any ruby lacking dig.
-
-If you are writing an app and want to use dig in it you should probably just upgrade to ruby 2.3.0. But if you are writing a gem and want it to work with both MRI 2.3.0 and others (including JRuby 9.0.x), this gem is for you. This gem only adds #dig methods if they aren't already defined, so it's safe to use in code that is for all rubies, if run on MRI 2.3.0 you'll still be using native #dig, otherwise dig_rb's implementation.
-
-### Will it work identically to MRI 2.3.0 dig?
-
-Dig_rb is tested with:
-
-* Specs found in MRI repo for #dig in 2.3.0
-* [Ruby Spec Suite](https://github.com/ruby/spec/) specs found in repo for Array and Hash#dig
-* All examples in MRI 2.3.0 generated method API docs. (One example in MRI 2.3.0 is _wrong_ about exception class and message returned, dig_rb matches actual 2.3.0 behavior there, not documented example)
-
-[Our travis](https://travis-ci.org/jrochkind/dig_rb) runs tests on a variety of ruby platforms, including 2.3.0 itself to make sure our tested behavior is what built-in dig in 2.3.0 does too.
-
-If you find any weird edge cases that work differenty in MRI 2.3.0 than in ruby_dig, let me know in a GitHub Issue please.
-
-The performance of dig_rb will probably be less than native MRI 2.3.0 implementation, this code is not written for performance. But it should
-be fine, really.
+[Our travis](https://travis-ci.org/jrochkind/dig_rb)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'dig_rb'
+gem 'dig_exact'
 ```
 
 And then execute:
@@ -39,11 +18,9 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install dig_rb
+    $ gem install dig_exact
 
 ## Usage
-
-Just go ahead and use #dig as doc'd in MRI 2.3.0, now it'll work on any ruby.
 
 * [Hash](http://ruby-doc.org/core-2.3.0/Hash.html#method-i-dig)
 * [Array](http://ruby-doc.org/core-2.3.0/Array.html#method-i-dig)
